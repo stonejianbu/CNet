@@ -13,7 +13,6 @@ func init()  {
 
 var Network = "tcp"
 var Name 	= "CNet server"
-var MaxConn = 3
 
 type CNet struct {
 	Network string // 网络协议，默认tcp
@@ -31,7 +30,7 @@ func NewCNet(address string) *CNet {
 		Address: address,
 		Router:  NewRouter(),
 		Hook:    NewHook(),
-		MaxConn: MaxConn,
+		MaxConn: 100,
 	}
 }
 
@@ -46,7 +45,7 @@ func (cn *CNet) Serve() {
 	defer listener.Close()
 
 	// 初始化worker，避免重复创建和销毁goroutine，这里通过提前创建一批goroutine用于处理到来的请求
-	worker := NewWorker()
+	worker := NewWorker(cn.MaxConn)
 	go worker.Start()
 	defer worker.Stop()
 

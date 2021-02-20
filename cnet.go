@@ -1,4 +1,4 @@
-package CNet
+package cnet
 
 import (
 	log "github.com/sirupsen/logrus"

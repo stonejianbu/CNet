@@ -4,7 +4,7 @@
 而不需要关注封装和解数据包的细节
 数据包的格式（dataLen|dataID|data），用户可将data数据加密后在进行发送
 */
-package CNet
+package cnet
 
 import (
 	"bytes"

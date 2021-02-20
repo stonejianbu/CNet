@@ -17,7 +17,7 @@
 在连接之前广播上线HOOK函数
 连接之后广播下线的HOOK函数
 */
-package CNet
+package cnet
 
 import (
 	"errors"

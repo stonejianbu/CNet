@@ -9,7 +9,7 @@
 提供给外部的接口是怎么样的？
 1.调用方法，添加到指定管道中，内部调用该实例的方法XX.Start()
 */
-package CNet
+package cnet
 
 import (
 	log "github.com/sirupsen/logrus"

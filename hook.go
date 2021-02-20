@@ -6,7 +6,7 @@
 4. RegisterOffConn(hook func(conn *Connection))
 */
 // https://www.bilibili.com/video/BV1wE411d7th?p=47&spm_id_from=pageDriver
-package CNet
+package cnet
 
 import log "github.com/sirupsen/logrus"
 
